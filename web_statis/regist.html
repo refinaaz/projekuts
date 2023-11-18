@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="logo.png">  
+    <title>RF's Kitchen Corner</title>
+
+     <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Pacifico&family=Poppins:wght@200;300;400;500&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- feather icon CSS -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- my style -->
+    <link rel="stylesheet" href="uts.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo"> RF's Kitchen Corner </a>
+
+      <div class="navbar-nav">
+        <a href="uts.html"> Beranda </a>
+        <a href="uts.html#about">Tentang Kami</a>
+        <a href="uts.html#galeri"> Galeri </a>
+        <a href="menu.html">Menu</a>
+        <a href="regist.html">Reservasi</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <center>
+          <img
+            src="img/logo.png" 
+            width="50%"
+            style="border-radius: 100px; border: 2px"/>
+          <p margin-top: 0> Kunjungi Sosial Media Kami!</p> <br>
+          <div class="icons-sidebar">
+            <a href="https://api.whatsapp.com/send/?phone=62895330813285&text&type=phone_number&app_absent=0"><i data-feather="phone"></i></a>
+            <a href="https://www.instagram.com/rfkitchencorner/"> <i data-feather="instagram"></i></a>
+          </div>
+        </center>
+      </div>
+
+      <!-- Isi Konten - Reservasi -->
+      <div class="reservasi">
+        <form id="reservasiform">
+          <h2> Reservasi Makanan Di sini! </h2>
+
+          <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Nomor Telepon</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Alamat Lengkap</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Tanggal Reservasi</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="specialRequests"> Tulis rincian pesananmu beserta jumlahnya di sini!</label>
+            <textarea id="specialRequests" name="specialRequests" rows="4"></textarea>
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+      </div>
+
+       <!-- Footer -->
+       <footer>
+        <hr>
+        <p>©RF's Kitchen Corner 2023</p>
+        <p>Desained by: Refina Azahra</p>
+        <p>
+            <a href="https://www.instagram.com/refinazhra/"><i data-feather="instagram"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=62895635332356&text&type=phone_number&app_absent=0"><i data-feather="phone"></i></a> 
+            <a href="https://www.facebook.com/refina.azahra.9"><i data-feather="facebook"></i></a>
+            <a href="https://www.linkedin.com/in/refina-azahra/"><i data-feather="linkedin"></i></a>
+        </p>
+    </footer>
+  
+      <!-- feather icon JS -->
+      <script>
+          feather.replace();
+      </script>
+  
+      <!-- JS -->
+      <script src="uts.js"> 
+      </script>
+  
+    </body>
+  </html>
+  

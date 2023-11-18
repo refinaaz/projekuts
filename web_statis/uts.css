@@ -1,0 +1,500 @@
+:root {
+  --bg: bisque;
+  --bgh: linear-gradient(to left, #eacda3, #d6ae7b);
+  --fontc: brown;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'poppins', sans-serif;
+  background-color: bisque;
+  color: brown;
+}
+
+/* Navbar */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background: linear-gradient(to left, #eacda3, #d6ae7b);
+  border-bottom: 1px solid rgb(29, 37, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: antiquewhite
+}
+
+.navbar .navbar-nav a{
+  color: #fff;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover{
+  color: brown;
+  transition: 0.4s linear;
+}
+/* Navbar End */
+
+/* Hero Section */
+.hero{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('img/bgpng.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after{
+content: '';
+display: block;
+position: absolute;
+width: 100%;
+height: 30%;
+bottom: 0;
+background: linear-gradient(0deg, var(--bg) 8%, rgb(222, 184, 135, 0) 50% );
+}
+
+.hero .content{
+  padding: 1.6rem 7%;
+  max-width: 80rem;
+}
+
+.hero .content h1{
+font-size: 2.3em;
+color: brown;
+text-shadow: 1px 1px 3px rgb(222, 184, 135, 0.5);
+line-height: 1.2;
+}
+
+.hero .content p{
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1rem;
+  text-shadow: 1px 1px 3px rgb(222, 184, 135, 0.5);
+}
+
+.hero .content .cta{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  color: #fff;
+  background-color: chocolate;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgb(222, 184, 135, 0.5);
+}
+/* Hero Section End */
+
+/* About Section Navbar */
+.about, .menu, .galeri {
+  padding: 6.8rem 7% 1.4rem;
+}
+
+.about h2, .menu h2, .galeri h2{
+text-align: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 1.9rem;
+margin-bottom: 3rem;
+}
+
+.about .row{
+  display: flex;
+}
+
+.about .row .about-img{
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img{
+  width: 100%;
+}
+
+.about .row .content{
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3{
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p{
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 110;
+  line-height: 1.6;
+}
+
+/* About in new html section */
+.fabout{
+  background-image: url('img/bgpng.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 6.8rem 7% 1.4rem;
+}
+
+.fabout h1{
+  text-align: center;
+  background-color: rgb(197, 159, 108);
+  color: #fff;
+  margin-bottom: 2.3%;
+  padding: 1.5%;
+  font-family: 'ubuntu';
+  border-style: inherit;
+}
+
+.fabout .fullabout img{
+  margin-left: 2%;
+}
+
+.fabout .fullabout p{
+  text-align: justify;
+  font-size: 19px;
+}
+/* About Section End */
+
+/* Galeri Section */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+/* Menu Section Navbar*/
+.menu h2{
+  margin-bottom: 1.6rem;
+}
+
+.menu p{
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card{
+  text-align: center;
+}
+
+.menu .row .menu-card img{
+border-radius: 50%;
+margin-left: 2.5rem;
+margin-right: 2.5rem;
+margin-top: 1.5rem;
+margin-bottom: 1.5rem;
+width: 40;
+width: 410px;
+}
+
+.menu .row .menu-card .menu-card-title{
+margin-top: 1.5rem auto 1.5rem;
+}
+/* Menu Section End */
+
+/* Kontak Section */
+.kontak{
+  padding: 6.8rem 7% 1.4rem;
+  align-items: center;
+}
+
+.kontak h2{
+  margin-top: 2%;
+text-align: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 1.9rem;
+margin-bottom: 3rem;
+}
+
+.kontak .kontaklogo{
+  text-align: center;
+  font-size: 150%;
+}
+
+.kontak a{
+  align-items: center;
+  color: brown;
+}
+
+.kontak a:hover{
+  color: rgb(224, 167, 82);
+  transition: 0.4s linear;
+}
+
+/* Artikel Section */
+.artikel{
+  padding: 6.8rem 7% 1.4rem;
+}
+
+.artikel h2{
+text-align: center;
+font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 1.9rem;
+margin-bottom: 1rem;
+}
+
+.artikel .row .artikel-card{
+  text-align: center;
+}
+
+.artikel .row {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.artikel .row .artikel-card img{
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+border-radius: 15%;
+width: 400px;
+}
+
+/*  Artikel 1 dan 2  */
+.artikel{
+  padding: 6.8rem 7% 1.4rem;
+}
+
+.artikel .kontenart{
+  text-align: justify;
+  padding-top: 2.3%;
+}
+/* Artikel Section End */
+
+/* Sidebar */
+.icons-sidebar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.sidebar {
+  height: 250px;
+  width: 130px;
+  position: fixed;
+  z-index: 9999;
+  display: block;
+  top: 200px;
+  bottom: 0px;
+  right: 0;
+  background: rgb(219, 170, 110);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 20px;
+  padding-left: 11px;
+  justify-content: center;
+  border-radius: 25px 0 0 25px;
+  margin-right: 0px;
+  margin-top: 0;
+  margin-bottom: 80px;
+  margin-left: 80px;
+  box-shadow: inset 0 4px 0 0 white, inset 4px 0 0 0 white,
+    inset 0 -4px 0 0 white;
+  font-family: "poppins";
+}
+
+.sidebar a {
+  padding: 1px 5px;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: brown;
+  transition: 0.3s linear;
+}
+/* Sidebar End */
+
+/* Reservasi Section */
+.reservasi{
+  padding: 6.8rem 7% 1.4rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(255, 227, 194, 01);
+}
+
+.reservasi h2{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.9rem;
+  margin-bottom: 3rem;
+}
+
+.reservasi form{
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.reservasi label{
+  display: block;
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #46320c;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(199, 146, 81);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(165, 77, 42);
+}
+
+/* Footer */
+footer {    
+  background: var(--bgh);
+  text-align: center;
+  font-family: 'ubuntu'; 
+  color: white; 
+  padding: 10px; 
+  margin-top: 100px;
+  font-size: 15px;
+}
+
+footer a{
+  color: #fff;
+  margin-left: 3px;
+}
+
+footer a:hover{
+  color: brown;
+  transition: 0.3s linear;
+}
+
+
+
